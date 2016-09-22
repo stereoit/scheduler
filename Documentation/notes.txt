@@ -50,3 +50,6 @@ Teacher view
  - show booked lessons
 
 <Teacher />
+
+
+First do react views with dummy data, then decide how to create backend DB (django + sqlite or Mongo with go, not sure now)
