@@ -1,0 +1,29 @@
+{
+  "name": "OKPandaScheduler",
+  "version": "1.0.0",
+  "description": "Fronted part for scheduler",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
+  },
+  "author": "Robert Smol <rs@akarni.com>",
+  "private": true,
+  "license": "ISC",
+  "devDependencies": {
+    "buble": "^0.13.1",
+    "rollup": "^0.34.10",
+    "rollup-plugin-buble": "^0.13.0",
+    "rollup-plugin-commonjs": "^3.3.1",
+    "rollup-plugin-filesize": "^0.4.4",
+    "rollup-plugin-includepaths": "^0.1.5",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-watch": "^2.5.0"
+  },
+  "dependencies": {
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
+  }
+}
