@@ -14,7 +14,7 @@ let includePathOptions = {
 };
 
 let rollupConfig = {
-  entry: 'js/teacher.js',
+  entry: 'js/main.js',
   plugins: [
     includePaths(includePathOptions),
     replace({
@@ -30,7 +30,7 @@ let rollupConfig = {
       main: true
     })
   ],
-  dest: 'dist/teacher.js'
+  dest: 'dist/main.js'
 };
 
 if (process.env.NODE_ENV == "production") {

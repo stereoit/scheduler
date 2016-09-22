@@ -25,28 +25,26 @@ let sebastian = new Student("Sebastian")
 let students = [robert,harry,sebastian]
 
 // sample teacher
-let teacher = new Teacher("Samanha Fox");
-teacher.slots.push(
-  slot1,
-  slot2,
-  slot3,
-  slot4,
-  slot5
-)
+let teacher1 = new Teacher("Mat Ryer");
+teacher1.slots.push(slot1,slot2,slot3,slot4,slot5);
+let teacher2 = new Teacher("Amos Komensky");
+teacher2.slots.push(slot4,slot5);
 
-let lesson1 = new Lesson(morning, morning.add(30, 'minutes'), robert, teacher)
+let teachers = [teacher1, teacher2];
+
+let lesson1 = new Lesson(morning, moment(morning).add(30, 'minutes'), robert, teacher1)
 // at this moment I hack it there, TODO: proper resource management
-teacher.lessons.push(lesson1)
+teacher1.lessons.push(lesson1)
 
 // React stuff
 const teacherApp = document.getElementById('teacherApp')
 if (teacherApp) {
-  ReactDOM.render(<TeacherView teacher={teacher} />, teacherApp);
+  ReactDOM.render(<TeacherView teacher={teacher1} />, teacherApp);
   console.log("TeacherView app started");
 }
 
 const studentApp = document.getElementById('studentApp')
 if (studentApp) {
-  ReactDOM.render(<StudentView />, studentApp);
+  ReactDOM.render(<StudentView student={robert} teachers={teachers} />, studentApp);
   console.log("StudentView app started");
 }

@@ -8,7 +8,8 @@ class LessonComponent extends React.Component {
       <div className="lesson">
         <ul>
           <li>when: {lesson.when.format(dateTimeFormat)}</li>
-          <li>studen: {lesson.student.name}</li>
+          <li>student: {lesson.student.name}</li>
+          <li>teacher: {lesson.teacher.name}</li>
         </ul>
       </div>
     )

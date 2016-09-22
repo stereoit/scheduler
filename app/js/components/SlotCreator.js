@@ -3,13 +3,21 @@ import moment from 'moment';
 import {dateTimeFormat} from 'utils';
 
 class SlotCreator extends React.Component {
-  constructor(){
+  constructor(props){
+    super(props)
+
+    let from_value = props.slot && props.slot.from || moment()
+    let from_valid = from_value.isValid()
+    let to_value = props.slot && props.slot.to || moment()
+    let to_valid = to_value.isValid()
+
     this.state = {
-      from_value: moment().format(dateTimeFormat),
-      from_valid: true,
-      to_value: moment().format(dateTimeFormat),
-      to_valid: true
+      from_value: from_value.format(dateTimeFormat),
+      from_valid: from_valid,
+      to_value: to_value.format(dateTimeFormat),
+      to_valid: to_valid
     }
+
     this.checkTime = this.checkTime.bind(this)
   }
 
@@ -65,6 +73,7 @@ class SlotCreator extends React.Component {
             }
           } >Create</button>
         }
+        {this.props.children}
       </div>
     )
   }

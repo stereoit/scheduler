@@ -28,7 +28,7 @@ class TeacherView extends React.Component {
         {teacher.slots.map( (slot, id) =>   <SlotComponent slot={slot} key={id} />  )}
         <p>Add new availability block </p>
         <SlotCreator onNewSlot={this.newSlotHandler}/>
-        <p>Booked lessongs</p>
+        <p>Booked lessons</p>
         {teacher.lessons.map( (lesson, id) =>   <LessonComponent lesson={lesson} key={id} />  )}
       </div>
     )
