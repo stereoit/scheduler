@@ -8,7 +8,7 @@ import uglify from 'rollup-plugin-uglify';
 
 let includePathOptions = {
   include: {},
-  paths: ['src'],
+  paths: ['js'],
   external: [],
   extensions: ['.js', '.json', '.html', '.png']
 };
