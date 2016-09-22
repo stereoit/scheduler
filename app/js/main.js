@@ -8,6 +8,7 @@ import Slot from 'models/Slot';
 
 import TeacherView from 'views/TeacherView';
 import StudentView from 'views/StudentView';
+import MainApp from 'views/MainApp';
 
 let morning = moment().hour(8)
 
@@ -48,3 +49,9 @@ if (studentApp) {
   ReactDOM.render(<StudentView student={robert} teachers={teachers} />, studentApp);
   console.log("StudentView app started");
 }
+
+// const mainApp = document.getElementById('mainApp')
+// if (mainApp) {
+//   ReactDOM.render(<MainApp />, mainApp);
+//   console.log("mainApp app started");
+// }
