@@ -1,0 +1,52 @@
+
+Models
+======
+
+```
+Teacher
+ .name (string)
+ .slots (m2m)
+ .lessons (m2m)
+
+Slot
+ .dt_from (datetime)
+ .dt_to (datetime)
+
+Student
+ .name (string)
+ .lessons (m2m)
+
+Lesson
+ .start (datetime)
+ .duration (integer)
+ .student (fk)
+ .teacher (fk)
+
+```
+
+
+Webapp
+
+Students view
+=============
+ - list of teachers (fetched during initial render)
+ - each teacher expands and shows available slots
+ - possiblity to book a lesson
+
+
+<Teachers>
+ <Teacher>
+  <Slots />
+  <BookLesson />
+ </Teacher>
+</Teacher>
+
+
+Teacher view
+============
+ - shows info about self (optional)
+ - shows created slots
+ - possibility to define new slot
+ - show booked lessons
+
+<Teacher />
