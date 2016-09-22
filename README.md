@@ -12,21 +12,30 @@ What I clearly missed
  - state management
  - any styling
 
- Overall
- -------
+Overall
+-------
 
  After the initial analysis I've tried to focus on implementing at least something complete. Since I have better experience with React than Jquery, I've built several components and reused some of them. For simplicity I've used rollup.js bundler, but fired back later when I tried to implement Backbone Router. Currently the features of adding new Slot and booking lesson are implemented. It would be necessary to add some check, so the used is not blocking Lesson out of allowed Slot time.
 
- Todos
- -----
+Todos
+-----
   - implement probably some kind of stores/actions so the state would be consistent
   - add dynamic url with Backbone Router
   - hookup the stores to REST api
   - style with Sass
 
- Structure
- ---------
+Structure
+---------
 
      ├── app  (frontend part)
      ├── docs (github pages)
      └── Documentation (initial task + notes)
+
+
+Building
+========
+
+    $ cd app
+    $ npm i
+    $ env NODE_ENV=production npm run build
+    $ cd dist && python -m SimpleHTTPServer 8001 // access at http://localhost:8001
