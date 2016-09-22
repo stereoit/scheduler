@@ -22,7 +22,8 @@ let rollupConfig = {
     }),
     buble(),
     commonjs({
-      include: 'node_modules/**'
+      include: 'node_modules/**',
+      exclude: [ 'node_modules/moment/**']
     }),
     nodeResolve({
       jsnext: true,
